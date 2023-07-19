@@ -1,4 +1,4 @@
-//ardity 01
+//ardity 02
 
 
 // Include the Servo library 
@@ -6,13 +6,13 @@
 
 
 // Create a servo object 
-Servo Servo1; 
-Servo Servo2; 
-Servo Servo3; 
-Servo Servo4; 
-Servo Servo5; 
-Servo Servo6; 
-// Servo Servo2; ....
+Servo Servo1; // Base
+Servo Servo2; // Gripper
+Servo Servo3; // Shoulder
+Servo Servo4; // Elbow - 1
+Servo Servo5; // Elbow - 2
+Servo Servo6; // Wrist
+// Servo Servo7; ....
 
 int a=0; // Flag like int, number of cases(positions)
 
@@ -22,9 +22,12 @@ int a=0; // Flag like int, number of cases(positions)
 void setup() {
   // initialize serial communication at 9600 bits per second:
   Serial.begin(9600);
-  // make the pushbutton's pin an input:
-  pinMode(13, OUTPUT); // for LEDs
-  // pinMode(12, OUTPUT);..... 
+
+   // Outputs
+   // for LEDs
+   pinMode(13, OUTPUT); 
+   // pinMode(12, OUTPUT);..... 
+  
    // We need to attach the servo to the used pin number (use only pwm)
    Servo1.attach(11); 
    Servo2.attach(10); 
@@ -136,5 +139,5 @@ void loop() {
     delay(1000);        // delay in between reads for stability
 }
 
-// End//ardity 01
+// End//
 
