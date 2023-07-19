@@ -4,10 +4,6 @@
 // Include the Servo library 
 #include <Servo.h> 
 
-// Declare the Servo pin 
-int servoPin = 3; 
-// int servoPin = 5;..... use only pwm
-
 
 // Create a servo object 
 Servo Servo1; 
@@ -15,6 +11,7 @@ Servo Servo2;
 Servo Servo3; 
 Servo Servo4; 
 Servo Servo5; 
+Servo Servo6; 
 // Servo Servo2; ....
 
 int a=0; // Flag like int, number of cases(positions)
@@ -28,12 +25,13 @@ void setup() {
   // make the pushbutton's pin an input:
   pinMode(13, OUTPUT); // for LEDs
   // pinMode(12, OUTPUT);..... 
-   // We need to attach the servo to the used pin number 
+   // We need to attach the servo to the used pin number (use only pwm)
    Servo1.attach(11); 
    Servo2.attach(10); 
    Servo3.attach(9); 
    Servo4.attach(6); 
    Servo5.attach(5); 
+   Servo5.attach(3); 
 }
 
 
@@ -70,6 +68,10 @@ void loop() {
       else if(c == 'F')
       {
         a=6;
+      }
+      else if(c == 'G')
+      {
+        a=7;
       }
       c = NULL;
     }
@@ -114,15 +116,22 @@ void loop() {
     delay(1000);        // delay in between reads for stability
     Servo5.write(180);  // position servo motor at x degrees
   }
+  else if(a==6)
+  {
+    Serial.println("task 6"); // Display in unity
+    Servo6.write(0);    // position servo motor at x degrees
+    delay(1000);        // delay in between reads for stability
+    Servo6.write(180);  // position servo motor at x degrees
+  }
 
   // add other cases with [else if a==3,4...]
 
   else
   {
+    Serial.println("task 7"); // Display in unity
     digitalWrite(13, HIGH); // LED On
     delay(1000);        // delay in between reads for stability
     digitalWrite(13, LOW); // LED Off
-    Serial.println("task 6"); // Display in unity
   }
     delay(1000);        // delay in between reads for stability
 }
