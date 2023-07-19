@@ -14,16 +14,17 @@ Servo Servo5; // Elbow - 2
 Servo Servo6; // Wrist
 // Servo Servo7; ....
 
-int a=0; // Flag like int, number of cases(positions)
-
+int a=0; // Flag like int, number of cases(servos+1)
 
 
 // the setup routine runs once when you press reset:
 void setup() {
+  
   // initialize serial communication at 9600 bits per second:
   Serial.begin(9600);
 
    // Outputs
+
    // for LEDs
    pinMode(13, OUTPUT); 
    // pinMode(12, OUTPUT);..... 
@@ -87,44 +88,44 @@ void loop() {
   if(a==1)
   {
     Serial.println("task 1"); // Display in unity
-    Servo1.write(0);    // position servo motor at x degrees
-    delay(1000);        // delay in between reads for stability
-    Servo1.write(180);  // position servo motor at x degrees
+    Servo1.write(0);          // position servo motor at x degrees
+    delay(1000);              // delay in between reads for stability
+    Servo1.write(180);        // position servo motor at x degrees
   }
   else if(a==2)
   {
     Serial.println("task 2"); // Display in unity
-    Servo2.write(0);    // position servo motor at x degrees
-    delay(1000);        // delay in between reads for stability
-    Servo2.write(180);  // position servo motor at x degrees
+    Servo2.write(0);          // position servo motor at x degrees
+    delay(1000);              // delay in between reads for stability
+    Servo2.write(180);        // position servo motor at x degrees
   }
   else if(a==3)
   {
     Serial.println("task 3"); // Display in unity
-    Servo3.write(0);    // position servo motor at x degrees
-    delay(1000);        // delay in between reads for stability
-    Servo3.write(180);  // position servo motor at x degrees
+    Servo3.write(0);          // position servo motor at x degrees
+    delay(1000);              // delay in between reads for stability
+    Servo3.write(180);        // position servo motor at x degrees
   }
   else if(a==4)
   {
     Serial.println("task 4"); // Display in unity
-    Servo4.write(0);    // position servo motor at x degrees
-    delay(1000);        // delay in between reads for stability
-    Servo4.write(180);  // position servo motor at x degrees
+    Servo4.write(0);          // position servo motor at x degrees
+    delay(1000);              // delay in between reads for stability
+    Servo4.write(180);        // position servo motor at x degrees
   }
   else if(a==5)
   {
     Serial.println("task 5"); // Display in unity
-    Servo5.write(0);    // position servo motor at x degrees
-    delay(1000);        // delay in between reads for stability
-    Servo5.write(180);  // position servo motor at x degrees
+    Servo5.write(0);          // position servo motor at x degrees
+    delay(1000);              // delay in between reads for stability
+    Servo5.write(180);        // position servo motor at x degrees
   }
   else if(a==6)
   {
     Serial.println("task 6"); // Display in unity
-    Servo6.write(0);    // position servo motor at x degrees
-    delay(1000);        // delay in between reads for stability
-    Servo6.write(180);  // position servo motor at x degrees
+    Servo6.write(0);          // position servo motor at x degrees
+    delay(1000);              // delay in between reads for stability
+    Servo6.write(180);        // position servo motor at x degrees
   }
 
   // add other cases with [else if a==3,4...]
@@ -132,12 +133,11 @@ void loop() {
   else
   {
     Serial.println("task 7"); // Display in unity
-    digitalWrite(13, HIGH); // LED On
-    delay(1000);        // delay in between reads for stability
-    digitalWrite(13, LOW); // LED Off
+    digitalWrite(13, HIGH);   // LED On
+    delay(1000);              // delay in between reads for stability
+    digitalWrite(13, LOW);    // LED Off
   }
-    delay(1000);        // delay in between reads for stability
+    delay(1000);              // delay in between reads for stability
 }
 
 // End//
-
