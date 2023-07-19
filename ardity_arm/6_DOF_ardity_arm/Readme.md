@@ -10,7 +10,7 @@
 * connect arduino and upload [code](https://github.com/adijams01/Unity/blob/main/ardity_arm/6_DOF_ardity_arm/6_DOF_ardity_arm.ino) to arduino from Arduino IDE
 * check ports (COM5) and baud rate (9600) is same at both places in arduino and unity
 * click on play
-* press a for action 1, press b for action 2...
+* press A for action 1, press B for action 2...
 
 ## Circuit Diagram
 
