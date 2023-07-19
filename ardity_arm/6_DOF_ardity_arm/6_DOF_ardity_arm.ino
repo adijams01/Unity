@@ -34,7 +34,7 @@ void setup() {
    Servo3.attach(9); 
    Servo4.attach(6); 
    Servo5.attach(5); 
-   Servo5.attach(3); 
+   Servo6.attach(3); 
 }
 
 
