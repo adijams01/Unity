@@ -10,7 +10,7 @@
 * click on play.
 * control the object with joystick module.
 
-## Circuit Diagram
+
 
 
 
